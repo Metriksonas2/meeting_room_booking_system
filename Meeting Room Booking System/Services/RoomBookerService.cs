@@ -7,12 +7,12 @@ using Meeting_Room_Booking_System.Utils;
 
 namespace Meeting_Room_Booking_System.Booking_actions
 {
-    public class RoomBooker : IRoomBooker
+    public class RoomBookerService : IRoomBooker
     {
         public IRoomChecker RoomChecker { get; set; }
         public IEmployeeChecker EmployeeChecker { get; set; }
 
-        public RoomBooker(IRoomChecker roomChecker, IEmployeeChecker employeeChecker)
+        public RoomBookerService(IRoomChecker roomChecker, IEmployeeChecker employeeChecker)
         {
             RoomChecker = roomChecker;
             EmployeeChecker = employeeChecker;

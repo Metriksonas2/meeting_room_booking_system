@@ -193,7 +193,7 @@ namespace Meeting_Room_Booking_System_UnitTests
     {
         private IRoomChecker roomChecker;
         private IEmployeeChecker employeeChecker;
-        private RoomBooker roomBooker;
+        private RoomBookerService roomBooker;
         private Booking booking;
 
         [SetUp]
@@ -202,7 +202,7 @@ namespace Meeting_Room_Booking_System_UnitTests
             roomChecker = Substitute.For<IRoomChecker>();
             //employeeChecker = Substitute.For<IEmployeeChecker>();
 
-            roomBooker = new RoomBooker(roomChecker, employeeChecker);
+            roomBooker = new RoomBookerService(roomChecker, employeeChecker);
 
             #region Booking attributes
 
